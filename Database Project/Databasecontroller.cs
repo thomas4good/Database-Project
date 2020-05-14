@@ -182,6 +182,27 @@ namespace Database_Project
                 conn.Close();
             }
         }
+        public void SelectQuestTree(string selectedtrader)
+        {
+            
+            try
+            {
+                conn.Open();
+
+                query = "SELECT quest_name from thicc_quest_info WHERE thicc_quest_info.quest_giver_name = '" + selectedtrader + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
     }
  

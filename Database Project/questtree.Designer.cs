@@ -36,7 +36,10 @@
             this.tradercb = new System.Windows.Forms.ComboBox();
             this.questlbl = new System.Windows.Forms.Label();
             this.currentquestcb = new System.Windows.Forms.ComboBox();
+            this.TherapistPanel = new System.Windows.Forms.Panel();
+            this.test = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.TherapistPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbx_trader
@@ -139,11 +142,30 @@
             this.currentquestcb.TabIndex = 0;
             this.currentquestcb.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // TherapistPanel
+            // 
+            this.TherapistPanel.Controls.Add(this.test);
+            this.TherapistPanel.Location = new System.Drawing.Point(229, 1);
+            this.TherapistPanel.Name = "TherapistPanel";
+            this.TherapistPanel.Size = new System.Drawing.Size(1213, 448);
+            this.TherapistPanel.TabIndex = 3;
+            this.TherapistPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.TherapistPanel_Paint);
+            // 
+            // test
+            // 
+            this.test.Location = new System.Drawing.Point(308, 192);
+            this.test.Name = "test";
+            this.test.Size = new System.Drawing.Size(75, 23);
+            this.test.TabIndex = 0;
+            this.test.Text = "test";
+            this.test.UseVisualStyleBackColor = true;
+            // 
             // questtree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1445, 450);
+            this.Controls.Add(this.TherapistPanel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.cbx_trader);
             this.Name = "questtree";
@@ -152,6 +174,7 @@
             this.Load += new System.EventHandler(this.skilltree_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.TherapistPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -166,5 +189,7 @@
         private System.Windows.Forms.ComboBox tradercb;
         private System.Windows.Forms.Button submuittreebtn;
         private System.Windows.Forms.Button selecttraderbtn;
+        private System.Windows.Forms.Panel TherapistPanel;
+        private System.Windows.Forms.Button test;
     }
 }

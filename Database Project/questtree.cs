@@ -17,11 +17,11 @@ namespace Database_Project
         public questtree()
         {
             InitializeComponent();
+            TherapistPanel.Visible = false;
+
             databasecontrol.SelectTrader();
             tradercb.DataSource = databasecontrol.dt;
             tradercb.DisplayMember = "quest_giver_name";
-
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,25 +36,32 @@ namespace Database_Project
 
         private void skilltree_Load(object sender, EventArgs e)
         {
-            tradercb.SelectedIndex = 0;
+
         }
 
         private void selecttraderbtn_Click(object sender, EventArgs e)
         {
+            DataRowView oDataRowView = tradercb.SelectedItem as DataRowView;
+            string sValue = "";
+            sValue = oDataRowView.Row[tradercb.DisplayMember] as string;
+            
             currentquestcb.Enabled = true;
+            currentquestcb.DataSource = null;
             currentquestcb.Items.Clear();
-            if (tradercb.SelectedItem == "Therapist")
+
+
+            if (sValue == "Therapist")
             {
-                currentquestcb.Items.AddRange(new string[] { "Shortage","Sanitary Standards - Part 1", "Sanitary Standards - Part 2", "Operation Aquarius - Part 1",
-                    "Operation Aquarius - Part 2", "Painkiller", "Pharmacist", "Supply plans", "General wares", "Car Repair", "Hippocratic Vow", "Health Care Privacy - Part 1",
-                    "Health Care Privacy - Part 2", "Health Care Privacy - Part 3", "Health Care Privacy - Part 4", "Athlete", "Health Care Privacy - Part 5 ", "Private Clinic"});
+                TherapistPanel.Visible = true;
             }
-            else if (tradercb.SelectedItem == "All")
-            {
-                currentquestcb.Items.AddRange(new string[] { "Shortage","Sanitary Standards - Part 1", "Sanitary Standards - Part 2", "Operation Aquarius - Part 1",
-                    "Operation Aquarius - Part 2", "Painkiller", "Pharmacist", "Supply plans", "General wares", "Car Repair", "Hippocratic Vow", "Health Care Privacy - Part 1",
-                    "Health Care Privacy - Part 2", "Health Care Privacy - Part 3", "Health Care Privacy - Part 4", "Athlete", "Health Care Privacy - Part 5 ", "Private Clinic"});
-            }
+            databasecontrol.SelectQuestTree(sValue);
+            currentquestcb.DataSource = databasecontrol.dt;
+            currentquestcb.DisplayMember = "quest_name";
+
+
+
+
+
         }
 
         private void submuittreebtn_Click(object sender, EventArgs e)
@@ -65,6 +72,11 @@ namespace Database_Project
         private void tradercb_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TherapistPanel_Paint(object sender, PaintEventArgs e)
+        {
+            
         }
     }
 }
