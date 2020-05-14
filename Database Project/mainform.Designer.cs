@@ -34,7 +34,7 @@
             this.dgv_main = new System.Windows.Forms.DataGridView();
             this.btn_items = new System.Windows.Forms.Button();
             this.btn_quests = new System.Windows.Forms.Button();
-            this.skilltreebtn = new System.Windows.Forms.Button();
+            this.questtreebtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).BeginInit();
             this.SuspendLayout();
@@ -104,22 +104,22 @@
             this.btn_quests.UseVisualStyleBackColor = true;
             this.btn_quests.Click += new System.EventHandler(this.button1_Click);
             // 
-            // skilltreebtn
+            // questtreebtn
             // 
-            this.skilltreebtn.Location = new System.Drawing.Point(709, 376);
-            this.skilltreebtn.Name = "skilltreebtn";
-            this.skilltreebtn.Size = new System.Drawing.Size(79, 23);
-            this.skilltreebtn.TabIndex = 4;
-            this.skilltreebtn.Text = "Skill Tree";
-            this.skilltreebtn.UseVisualStyleBackColor = true;
-            this.skilltreebtn.Click += new System.EventHandler(this.button1_Click_1);
+            this.questtreebtn.Location = new System.Drawing.Point(709, 376);
+            this.questtreebtn.Name = "questtreebtn";
+            this.questtreebtn.Size = new System.Drawing.Size(79, 23);
+            this.questtreebtn.TabIndex = 4;
+            this.questtreebtn.Text = "Quest Tree";
+            this.questtreebtn.UseVisualStyleBackColor = true;
+            this.questtreebtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.skilltreebtn);
+            this.Controls.Add(this.questtreebtn);
             this.Controls.Add(this.btn_quests);
             this.Controls.Add(this.btn_items);
             this.Controls.Add(this.dgv_main);
@@ -143,6 +143,6 @@
         private System.Windows.Forms.DataGridView dgv_main;
         private System.Windows.Forms.Button btn_items;
         private System.Windows.Forms.Button btn_quests;
-        private System.Windows.Forms.Button skilltreebtn;
+        private System.Windows.Forms.Button questtreebtn;
     }
 }
