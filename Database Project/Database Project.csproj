@@ -92,6 +92,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="skilltree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="skilltree.Designer.cs">
+      <DependentUpon>skilltree.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>

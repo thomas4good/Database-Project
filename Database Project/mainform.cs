@@ -53,5 +53,10 @@ namespace Database_Project
             }
             LoadGrid();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            skilltree f3 = new skilltree();
+        }
     }
 }
