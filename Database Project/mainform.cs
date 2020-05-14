@@ -58,5 +58,33 @@ namespace Database_Project
         {
             skilltree f3 = new skilltree();
         }
+
+        private void btn_kills_Click(object sender, EventArgs e)
+        {
+            if (cbx_trader.Text == "")
+            {
+                databasecontrol.ViewSpecQuest("*","kill_quests");
+            }
+            else
+            {
+                databasecontrol.ViewSpecQuest(cbx_trader.Text, "kill_quests");
+            }
+            LoadGrid();
+        }
+
+        private void btn_skills_Click(object sender, EventArgs e)
+        {
+            {
+                if (cbx_trader.Text == "")
+                {
+                    databasecontrol.ViewSpecQuest("*", "skill_quests");
+                }
+                else
+                {
+                    databasecontrol.ViewSpecQuest(cbx_trader.Text, "skill_quests");
+                }
+                LoadGrid();
+            }
+        }
     }
 }

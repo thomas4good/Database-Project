@@ -136,6 +136,32 @@ namespace Database_Project
                 conn.Close();
             }
         }
+        public void ViewSpecQuest(string trader,string table)
+        {
+            try
+            {
+                conn.Open();
+                if (trader == "*")
+                {
+                    query = "SELECT * from " + table + ";";
+                }
+                else
+                {
+                    query = "SELECT * from " + table + " WHERE quest_giver_name = '" + trader + "';";
+                }
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
  
 }
