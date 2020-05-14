@@ -16,10 +16,9 @@ namespace Database_Project
     {
         static string constring = System.Configuration.ConfigurationSettings.AppSettings["ConnectionString"];
         private string query = "";
-        private DataTable dt;
+        public DataTable dt;
         private NpgsqlCommand cmd;
         public NpgsqlConnection conn = new NpgsqlConnection(constring);
-        private DataAdapter da;
 
         public int GetUserID(String username){
              int id = 0;
@@ -85,5 +84,58 @@ namespace Database_Project
                 conn.Close();
             }
         }
+        public void SelectQuests(string trader)
+        {
+            try
+            {
+                conn.Open();
+                if (trader == "*")
+                {
+                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id";
+                }
+                else
+                {
+                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id WHERE quest_giver.quest_giver_name = '" + trader + "';";
+                }
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public void SelectItems(string trader)
+        {
+            try
+            {
+                conn.Open();
+                if (trader == "*")
+                {
+                    query = "SELECT item_name,item_quantity from item_quests;";
+                }
+                else
+                {
+                    query = "SELECT item_name,item_quantity from item_quests WHERE quest_giver_name = '" + trader + "';";
+                }
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
     }
+ 
 }
