@@ -162,6 +162,27 @@ namespace Database_Project
                 conn.Close();
             }
         }
+
+        public void SelectTrader()
+        {
+            try
+            {
+                conn.Open();
+                query = "SELECT quest_giver_name from quest_giver";            
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
     }
  
 }

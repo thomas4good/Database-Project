@@ -17,7 +17,11 @@ namespace Database_Project
         public questtree()
         {
             InitializeComponent();
+            databasecontrol.SelectTrader();
             tradercb.DataSource = databasecontrol.dt;
+            tradercb.DisplayMember = "quest_giver_name";
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
