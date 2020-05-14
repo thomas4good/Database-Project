@@ -91,11 +91,11 @@ namespace Database_Project
                 conn.Open();
                 if (trader == "*")
                 {
-                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id";
+                    query = "SELECT * from Thicc_quest_info";
                 }
                 else
                 {
-                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id WHERE quest_giver.quest_giver_name = '" + trader + "';";
+                    query = "SELECT * from  Thicc_quest_info  WHERE quest_giver_name = '" + trader + "';";
                 }
                 cmd = new NpgsqlCommand(query, conn);
                 dt = new DataTable();
@@ -181,6 +181,26 @@ namespace Database_Project
             {
                 conn.Close();
             }
+        }
+        public void RemoveUser(string username)
+        {
+            try
+            {
+                conn.Open();
+                query = "DELETE FROM users where username = '" + username + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
     }

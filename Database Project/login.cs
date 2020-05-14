@@ -72,5 +72,12 @@ namespace Database_Project
             this.Hide();
             f2.Show();
         }
+
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            databasecontrol.RemoveUser(txt_username.Text);
+            DialogResult result;
+            result = MessageBox.Show("User deleted.");
+        }
     }
 }
