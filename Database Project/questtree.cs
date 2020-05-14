@@ -17,6 +17,7 @@ namespace Database_Project
         public questtree()
         {
             InitializeComponent();
+            AllQuestsPanel.Visible = true;
             TherapistPanel.Visible = false;
 
             databasecontrol.SelectTrader();
@@ -66,7 +67,8 @@ namespace Database_Project
 
         private void submuittreebtn_Click(object sender, EventArgs e)
         {
-
+            AllQuestsPanel.Visible = true;
+            TherapistPanel.Visible = false;
         }
 
         private void tradercb_SelectedIndexChanged(object sender, EventArgs e)
