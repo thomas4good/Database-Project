@@ -17,7 +17,7 @@ namespace Database_Project
     public partial class login : Form
     {
       Databasecontroller databasecontrol = new Databasecontroller();
-
+      mainform f2 = new mainform();
 
 
 
@@ -35,7 +35,7 @@ namespace Database_Project
         {
             string table = "users";
             string value1 = "user_level";
-            mainform f2 = new mainform();
+           
             try
             {
               int userid = databasecontrol.GetUserID(txt_username.Text);
@@ -64,6 +64,13 @@ namespace Database_Project
 
             }
             
+        }
+
+        private void btn_skip_Click(object sender, EventArgs e)
+        {
+            //advance to the next form
+            this.Hide();
+            f2.Show();
         }
     }
 }

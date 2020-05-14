@@ -33,11 +33,12 @@
             this.txt_level = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_skip = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_signin
             // 
-            this.btn_signin.Location = new System.Drawing.Point(106, 131);
+            this.btn_signin.Location = new System.Drawing.Point(57, 132);
             this.btn_signin.Name = "btn_signin";
             this.btn_signin.Size = new System.Drawing.Size(75, 23);
             this.btn_signin.TabIndex = 3;
@@ -79,11 +80,22 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "User Level";
             // 
+            // btn_skip
+            // 
+            this.btn_skip.Location = new System.Drawing.Point(150, 132);
+            this.btn_skip.Name = "btn_skip";
+            this.btn_skip.Size = new System.Drawing.Size(75, 23);
+            this.btn_skip.TabIndex = 5;
+            this.btn_skip.Text = "Skip";
+            this.btn_skip.UseVisualStyleBackColor = true;
+            this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 167);
+            this.Controls.Add(this.btn_skip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_level);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.TextBox txt_level;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_skip;
     }
 }
