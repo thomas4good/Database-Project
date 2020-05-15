@@ -209,7 +209,7 @@ namespace Database_Project
             {
                 conn.Open();
 
-                query = "SELECT quest_name from thicc_quest_info WHERE thicc_quest_info.quest_giver_name = '" + selectedtrader + "';";
+                query = "SELECT DISTINCT quest_name, quest_num from thicc_quest_info WHERE thicc_quest_info.quest_giver_name = '" + selectedtrader + "' ORDER BY quest_num;";
                 cmd = new NpgsqlCommand(query, conn);
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
