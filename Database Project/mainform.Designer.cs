@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_dip = new System.Windows.Forms.Label();
+            this.btn_display = new System.Windows.Forms.Button();
+            this.btn_refresh = new System.Windows.Forms.Button();
+            this.cbx_current = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btn_back = new System.Windows.Forms.Button();
+            this.questtreebtn = new System.Windows.Forms.Button();
             this.btn_skills = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btn_kills = new System.Windows.Forms.Button();
@@ -37,14 +44,7 @@
             this.btn_items = new System.Windows.Forms.Button();
             this.btn_quests = new System.Windows.Forms.Button();
             this.dgv_main = new System.Windows.Forms.DataGridView();
-            this.questtreebtn = new System.Windows.Forms.Button();
             this.lbl_info = new System.Windows.Forms.Label();
-            this.btn_back = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbx_current = new System.Windows.Forms.ComboBox();
-            this.btn_refresh = new System.Windows.Forms.Button();
-            this.btn_display = new System.Windows.Forms.Button();
-            this.lbl_dip = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_main)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,81 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(171, 450);
             this.panel1.TabIndex = 0;
+            // 
+            // lbl_dip
+            // 
+            this.lbl_dip.AutoSize = true;
+            this.lbl_dip.Location = new System.Drawing.Point(40, 382);
+            this.lbl_dip.Name = "lbl_dip";
+            this.lbl_dip.Size = new System.Drawing.Size(84, 13);
+            this.lbl_dip.TabIndex = 12;
+            this.lbl_dip.Text = "Quest Displayed";
+            // 
+            // btn_display
+            // 
+            this.btn_display.Location = new System.Drawing.Point(88, 356);
+            this.btn_display.Name = "btn_display";
+            this.btn_display.Size = new System.Drawing.Size(75, 23);
+            this.btn_display.TabIndex = 11;
+            this.btn_display.Text = "Display";
+            this.btn_display.UseVisualStyleBackColor = true;
+            this.btn_display.Click += new System.EventHandler(this.btn_display_Click);
+            // 
+            // btn_refresh
+            // 
+            this.btn_refresh.Location = new System.Drawing.Point(7, 356);
+            this.btn_refresh.Name = "btn_refresh";
+            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
+            this.btn_refresh.TabIndex = 10;
+            this.btn_refresh.Text = "Refresh";
+            this.btn_refresh.UseVisualStyleBackColor = true;
+            this.btn_refresh.Click += new System.EventHandler(this.btn_refresh_Click);
+            // 
+            // cbx_current
+            // 
+            this.cbx_current.FormattingEnabled = true;
+            this.cbx_current.Items.AddRange(new object[] {
+            "Therapist",
+            "Prapor",
+            "Peacekeeper",
+            "Mechanic",
+            "Jaeger",
+            "Skier",
+            "Ragman",
+            "Fence"});
+            this.cbx_current.Location = new System.Drawing.Point(7, 329);
+            this.cbx_current.Name = "cbx_current";
+            this.cbx_current.Size = new System.Drawing.Size(156, 21);
+            this.cbx_current.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 313);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Display current quest info:";
+            // 
+            // btn_back
+            // 
+            this.btn_back.Location = new System.Drawing.Point(3, 424);
+            this.btn_back.Name = "btn_back";
+            this.btn_back.Size = new System.Drawing.Size(79, 23);
+            this.btn_back.TabIndex = 8;
+            this.btn_back.Text = "Back";
+            this.btn_back.UseVisualStyleBackColor = true;
+            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
+            // 
+            // questtreebtn
+            // 
+            this.questtreebtn.Location = new System.Drawing.Point(88, 424);
+            this.questtreebtn.Name = "questtreebtn";
+            this.questtreebtn.Size = new System.Drawing.Size(79, 23);
+            this.questtreebtn.TabIndex = 4;
+            this.questtreebtn.Text = "Quest Tree";
+            this.questtreebtn.UseVisualStyleBackColor = true;
+            this.questtreebtn.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btn_skills
             // 
@@ -153,16 +228,6 @@
             this.dgv_main.Size = new System.Drawing.Size(643, 329);
             this.dgv_main.TabIndex = 1;
             // 
-            // questtreebtn
-            // 
-            this.questtreebtn.Location = new System.Drawing.Point(88, 424);
-            this.questtreebtn.Name = "questtreebtn";
-            this.questtreebtn.Size = new System.Drawing.Size(79, 23);
-            this.questtreebtn.TabIndex = 4;
-            this.questtreebtn.Text = "Quest Tree";
-            this.questtreebtn.UseVisualStyleBackColor = true;
-            this.questtreebtn.Click += new System.EventHandler(this.button1_Click_1);
-            // 
             // lbl_info
             // 
             this.lbl_info.AutoSize = true;
@@ -171,70 +236,6 @@
             this.lbl_info.Name = "lbl_info";
             this.lbl_info.Size = new System.Drawing.Size(0, 31);
             this.lbl_info.TabIndex = 5;
-            // 
-            // btn_back
-            // 
-            this.btn_back.Location = new System.Drawing.Point(3, 424);
-            this.btn_back.Name = "btn_back";
-            this.btn_back.Size = new System.Drawing.Size(79, 23);
-            this.btn_back.TabIndex = 8;
-            this.btn_back.Text = "Back";
-            this.btn_back.UseVisualStyleBackColor = true;
-            this.btn_back.Click += new System.EventHandler(this.btn_back_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 313);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 13);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "Display current quest info:";
-            // 
-            // cbx_current
-            // 
-            this.cbx_current.FormattingEnabled = true;
-            this.cbx_current.Items.AddRange(new object[] {
-            "Therapist",
-            "Prapor",
-            "Peacekeeper",
-            "Mechanic",
-            "Jaeger",
-            "Skier",
-            "Ragman",
-            "Fence"});
-            this.cbx_current.Location = new System.Drawing.Point(7, 329);
-            this.cbx_current.Name = "cbx_current";
-            this.cbx_current.Size = new System.Drawing.Size(156, 21);
-            this.cbx_current.TabIndex = 6;
-            // 
-            // btn_refresh
-            // 
-            this.btn_refresh.Location = new System.Drawing.Point(7, 356);
-            this.btn_refresh.Name = "btn_refresh";
-            this.btn_refresh.Size = new System.Drawing.Size(75, 23);
-            this.btn_refresh.TabIndex = 10;
-            this.btn_refresh.Text = "Refresh";
-            this.btn_refresh.UseVisualStyleBackColor = true;
-            // 
-            // btn_display
-            // 
-            this.btn_display.Location = new System.Drawing.Point(88, 356);
-            this.btn_display.Name = "btn_display";
-            this.btn_display.Size = new System.Drawing.Size(75, 23);
-            this.btn_display.TabIndex = 11;
-            this.btn_display.Text = "Display";
-            this.btn_display.UseVisualStyleBackColor = true;
-            this.btn_display.Click += new System.EventHandler(this.btn_display_Click);
-            // 
-            // lbl_dip
-            // 
-            this.lbl_dip.AutoSize = true;
-            this.lbl_dip.Location = new System.Drawing.Point(40, 382);
-            this.lbl_dip.Name = "lbl_dip";
-            this.lbl_dip.Size = new System.Drawing.Size(84, 13);
-            this.lbl_dip.TabIndex = 12;
-            this.lbl_dip.Text = "Quest Displayed";
             // 
             // mainform
             // 

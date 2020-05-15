@@ -103,9 +103,16 @@ namespace Database_Project
 
         private void btn_display_Click(object sender, EventArgs e)
         {
-            
+            databasecontrol.CurrentQuests(cbx_current.Text);
             lbl_dip.Visible = true;
             LoadGrid();
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            databasecontrol.SelectQuestTree(cbx_trader.Text);
+            cbx_current.DataSource = databasecontrol.dt;
+            cbx_current.DisplayMember = "quest_name";
         }
     }
 }

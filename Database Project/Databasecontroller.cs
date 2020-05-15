@@ -224,6 +224,25 @@ namespace Database_Project
             }
 
         }
+        public void CurrentQuests(string quest)
+        {
+            try
+            {
+                conn.Open();
+                query = "SELECT * from  Thicc_quest_info  WHERE quest_name = '" + quest + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
 
     }
  
