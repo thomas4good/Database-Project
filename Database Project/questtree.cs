@@ -18,7 +18,8 @@ namespace Database_Project
         {
             InitializeComponent();
             AllQuestsPanel.Visible = true;
-            TherapistPanel.Visible = false;
+            TherapistPanel.Visible = true;
+            unavailablepanel.Visible = false;
 
             databasecontrol.SelectTrader();
             tradercb.DataSource = databasecontrol.dt;
@@ -128,6 +129,7 @@ namespace Database_Project
         {
             AllQuestsPanel.Visible = true;
             TherapistPanel.Visible = false;
+            unavailablepanel.Visible = false;
         }
 
         private void tradercb_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,6 +138,7 @@ namespace Database_Project
             string sValue = "";
             try
             {
+                AllQuestsPanel.Visible = false;
                 currentquestcb.Enabled = true;
                 currentquestcb.DataSource = null;
                 currentquestcb.Items.Clear();
@@ -145,7 +148,17 @@ namespace Database_Project
                 if (sValue == "Therapist")
                 {
                     TherapistPanel.Visible = true;
+                    unavailablepanel.Visible = false;
                 }
+                else if (sValue == "ttt")
+                {
+
+                }
+                else
+                {
+                    unavailablepanel.Visible = true;
+                }
+
                 databasecontrol.SelectQuestTree(sValue);
                 currentquestcb.DataSource = databasecontrol.dt;
                 currentquestcb.DisplayMember = "quest_name";
