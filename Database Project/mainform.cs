@@ -20,7 +20,10 @@ namespace Database_Project
 
         private void mainform_Load(object sender, EventArgs e)
         {
-
+            databasecontrol.SelectTrader();
+            cbx_trader.DataSource = databasecontrol.dt;
+            cbx_trader.DisplayMember = "quest_giver_name";
+            lbl_dip.Visible = false;
         }
 
         private void btn_items_Click(object sender, EventArgs e)
@@ -34,6 +37,7 @@ namespace Database_Project
                 databasecontrol.SelectItems(cbx_trader.Text);
             }
             LoadGrid();
+            lbl_info.Text = "This is a list of all the required Items for: " + cbx_trader.Text;
         }
 
         private void LoadGrid()
@@ -71,6 +75,7 @@ namespace Database_Project
                 databasecontrol.ViewSpecQuest(cbx_trader.Text, "kill_quests");
             }
             LoadGrid();
+            lbl_info.Text = "This is a list of quests that require kills for: " + cbx_trader.Text;
         }
 
         private void btn_skills_Click(object sender, EventArgs e)
@@ -85,7 +90,29 @@ namespace Database_Project
                     databasecontrol.ViewSpecQuest(cbx_trader.Text, "skill_quests");
                 }
                 LoadGrid();
+                lbl_info.Text = "This is a list of quests that require skills for: " + cbx_trader.Text;
             }
+        }
+
+        private void btn_back_Click(object sender, EventArgs e)
+        {
+            login f2 = new login();
+            this.Hide();
+            f2.Show();
+        }
+
+        private void btn_display_Click(object sender, EventArgs e)
+        {
+            databasecontrol.CurrentQuests(cbx_current.Text);
+            lbl_dip.Visible = true;
+            LoadGrid();
+        }
+
+        private void btn_refresh_Click(object sender, EventArgs e)
+        {
+            databasecontrol.SelectQuestTree(cbx_trader.Text);
+            cbx_current.DataSource = databasecontrol.dt;
+            cbx_current.DisplayMember = "quest_name";
         }
     }
 }

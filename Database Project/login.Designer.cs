@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_skip = new System.Windows.Forms.Button();
+            this.btn_remove = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_signin
@@ -90,11 +91,22 @@
             this.btn_skip.UseVisualStyleBackColor = true;
             this.btn_skip.Click += new System.EventHandler(this.btn_skip_Click);
             // 
+            // btn_remove
+            // 
+            this.btn_remove.Location = new System.Drawing.Point(57, 170);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(168, 23);
+            this.btn_remove.TabIndex = 6;
+            this.btn_remove.Text = "Remove me from databaes plz";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 167);
+            this.ClientSize = new System.Drawing.Size(295, 205);
+            this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.btn_skip);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -118,5 +130,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_skip;
+        private System.Windows.Forms.Button btn_remove;
     }
 }

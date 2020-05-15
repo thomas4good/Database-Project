@@ -91,11 +91,11 @@ namespace Database_Project
                 conn.Open();
                 if (trader == "*")
                 {
-                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id";
+                    query = "SELECT * from Thicc_quest_info";
                 }
                 else
                 {
-                    query = "SELECT * from quests INNER JOIN quest_giver ON quest_giver.id = quests.quest_giver_id WHERE quest_giver.quest_giver_name = '" + trader + "';";
+                    query = "SELECT * from  Thicc_quest_info  WHERE quest_giver_name = '" + trader + "';";
                 }
                 cmd = new NpgsqlCommand(query, conn);
                 dt = new DataTable();
@@ -182,6 +182,26 @@ namespace Database_Project
                 conn.Close();
             }
         }
+        
+        public void RemoveUser(string username)
+        {
+            try
+            {
+                conn.Open();
+                query = "DELETE FROM users where username = '" + username + "';";
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+                
         public void SelectQuestTree(string selectedtrader)
         {
             
@@ -202,6 +222,73 @@ namespace Database_Project
             {
                 conn.Close();
             }
+
+        }
+        public void CurrentQuests(string quest)
+        {
+            try
+            {
+                conn.Open();
+                query = "SELECT * from  Thicc_quest_info  WHERE quest_name = '" + quest + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public void QuestDescription(string questname)
+        {
+
+            try
+            {
+                conn.Open();
+
+                query = "SELECT quest_descriptions from thicc_quest_info WHERE thicc_quest_info.quest_name = '" + questname + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public void QuestNum(string questname)
+        {
+
+            try
+            {
+                conn.Open();
+
+                query = "SELECT quest_num from thicc_quest_info WHERE thicc_quest_info.quest_name = '" + questname + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
         }
 
     }
