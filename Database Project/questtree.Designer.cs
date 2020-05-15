@@ -74,7 +74,6 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -85,7 +84,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
             this.TherapistPanel.SuspendLayout();
             this.unavailablepanel.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -573,7 +571,6 @@
             // PraporPanel
             // 
             this.PraporPanel.BackColor = System.Drawing.SystemColors.GrayText;
-            this.PraporPanel.Controls.Add(this.label19);
             this.PraporPanel.Controls.Add(this.label5);
             this.PraporPanel.Controls.Add(this.label4);
             this.PraporPanel.Controls.Add(this.label3);
@@ -587,7 +584,6 @@
             this.PraporPanel.Controls.Add(this.label11);
             this.PraporPanel.Controls.Add(this.label13);
             this.PraporPanel.Controls.Add(this.label14);
-            this.PraporPanel.Controls.Add(this.label15);
             this.PraporPanel.Controls.Add(this.label16);
             this.PraporPanel.Controls.Add(this.label17);
             this.PraporPanel.Controls.Add(this.label18);
@@ -696,20 +692,6 @@
             this.label14.Tag = "3";
             this.label14.Text = "Delivery From The Past";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.BurlyWood;
-            this.label15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label15.Location = new System.Drawing.Point(923, 158);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(104, 76);
-            this.label15.TabIndex = 43;
-            this.label15.Tag = "9";
-            this.label15.Text = "Perfect Mediator";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label16
             // 
@@ -851,20 +833,6 @@
             this.label5.Text = "Insomnia";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.BurlyWood;
-            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label19.Location = new System.Drawing.Point(1143, 391);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(104, 77);
-            this.label19.TabIndex = 70;
-            this.label19.Tag = "11";
-            this.label19.Text = "Test Drive Part 1";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // questtree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -932,7 +900,6 @@
         private System.Windows.Forms.Label questgiverdb;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel PraporPanel;
-        private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -946,7 +913,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
