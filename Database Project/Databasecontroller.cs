@@ -189,6 +189,7 @@ namespace Database_Project
             {
                 conn.Open();
                 query = "DELETE FROM users where username = '" + username + "';";
+                cmd = new NpgsqlCommand(query, conn);
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
             }
