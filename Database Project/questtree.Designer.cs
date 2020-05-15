@@ -30,7 +30,6 @@
         {
             this.cbx_trader = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.selecttraderbtn = new System.Windows.Forms.Button();
             this.viewquesttreebtn = new System.Windows.Forms.Button();
             this.traderlbl = new System.Windows.Forms.Label();
             this.tradercb = new System.Windows.Forms.ComboBox();
@@ -38,7 +37,6 @@
             this.currentquestcb = new System.Windows.Forms.ComboBox();
             this.AllQuestsPanel = new System.Windows.Forms.Panel();
             this.TherapistPanel = new System.Windows.Forms.Panel();
-            this.updatequestbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.AllQuestsPanel.SuspendLayout();
             this.SuspendLayout();
@@ -63,8 +61,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.panel1.Controls.Add(this.updatequestbtn);
-            this.panel1.Controls.Add(this.selecttraderbtn);
             this.panel1.Controls.Add(this.viewquesttreebtn);
             this.panel1.Controls.Add(this.traderlbl);
             this.panel1.Controls.Add(this.tradercb);
@@ -75,16 +71,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(227, 1041);
             this.panel1.TabIndex = 2;
-            // 
-            // selecttraderbtn
-            // 
-            this.selecttraderbtn.Location = new System.Drawing.Point(51, 55);
-            this.selecttraderbtn.Name = "selecttraderbtn";
-            this.selecttraderbtn.Size = new System.Drawing.Size(110, 23);
-            this.selecttraderbtn.TabIndex = 6;
-            this.selecttraderbtn.Text = "Select Trader";
-            this.selecttraderbtn.UseVisualStyleBackColor = true;
-            this.selecttraderbtn.Click += new System.EventHandler(this.selecttraderbtn_Click);
             // 
             // viewquesttreebtn
             // 
@@ -108,16 +94,6 @@
             // tradercb
             // 
             this.tradercb.FormattingEnabled = true;
-            this.tradercb.Items.AddRange(new object[] {
-            "Therapist",
-            "Prapor",
-            "Peacekeeper",
-            "Mechanic",
-            "Jaeger",
-            "Skier",
-            "Ragman",
-            "Fence",
-            "All"});
             this.tradercb.Location = new System.Drawing.Point(12, 28);
             this.tradercb.Name = "tradercb";
             this.tradercb.Size = new System.Drawing.Size(184, 21);
@@ -162,15 +138,6 @@
             this.TherapistPanel.Size = new System.Drawing.Size(1673, 1040);
             this.TherapistPanel.TabIndex = 4;
             // 
-            // updatequestbtn
-            // 
-            this.updatequestbtn.Location = new System.Drawing.Point(37, 528);
-            this.updatequestbtn.Name = "updatequestbtn";
-            this.updatequestbtn.Size = new System.Drawing.Size(132, 23);
-            this.updatequestbtn.TabIndex = 7;
-            this.updatequestbtn.Text = "Update Current Quest";
-            this.updatequestbtn.UseVisualStyleBackColor = true;
-            // 
             // questtree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -199,9 +166,7 @@
         private System.Windows.Forms.Label traderlbl;
         private System.Windows.Forms.ComboBox tradercb;
         private System.Windows.Forms.Button viewquesttreebtn;
-        private System.Windows.Forms.Button selecttraderbtn;
         private System.Windows.Forms.Panel AllQuestsPanel;
         private System.Windows.Forms.Panel TherapistPanel;
-        private System.Windows.Forms.Button updatequestbtn;
     }
 }
