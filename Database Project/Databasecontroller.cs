@@ -225,6 +225,53 @@ namespace Database_Project
 
         }
 
+        public void QuestDescription(string questname)
+        {
+
+            try
+            {
+                conn.Open();
+
+                query = "SELECT quest_descriptions from thicc_quest_info WHERE thicc_quest_info.quest_name = '" + questname + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
+        public void QuestNum(string questname)
+        {
+
+            try
+            {
+                conn.Open();
+
+                query = "SELECT quest_num from thicc_quest_info WHERE thicc_quest_info.quest_name = '" + questname + "';";
+                cmd = new NpgsqlCommand(query, conn);
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+
     }
  
 }
