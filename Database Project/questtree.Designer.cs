@@ -59,17 +59,36 @@
             this.viewquesttreebtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.questgiverdb = new System.Windows.Forms.Label();
-            this.questdesclbl = new System.Windows.Forms.Label();
-            this.questnamedb = new System.Windows.Forms.Label();
-            this.questnamelbl = new System.Windows.Forms.Label();
-            this.questdescdb = new System.Windows.Forms.Label();
             this.questgiverlbl = new System.Windows.Forms.Label();
+            this.questdescdb = new System.Windows.Forms.Label();
+            this.questnamelbl = new System.Windows.Forms.Label();
+            this.questnamedb = new System.Windows.Forms.Label();
+            this.questdesclbl = new System.Windows.Forms.Label();
+            this.questgiverdb = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PraporPanel = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.debutlbl = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.TherapistPanel.SuspendLayout();
             this.unavailablepanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.PraporPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbx_trader
@@ -482,30 +501,22 @@
             this.panel2.Size = new System.Drawing.Size(227, 455);
             this.panel2.TabIndex = 13;
             // 
-            // questgiverdb
+            // questgiverlbl
             // 
-            this.questgiverdb.Location = new System.Drawing.Point(81, 11);
-            this.questgiverdb.Name = "questgiverdb";
-            this.questgiverdb.Size = new System.Drawing.Size(142, 13);
-            this.questgiverdb.TabIndex = 11;
-            this.questgiverdb.Text = "Name";
+            this.questgiverlbl.AutoSize = true;
+            this.questgiverlbl.Location = new System.Drawing.Point(9, 11);
+            this.questgiverlbl.Name = "questgiverlbl";
+            this.questgiverlbl.Size = new System.Drawing.Size(66, 13);
+            this.questgiverlbl.TabIndex = 8;
+            this.questgiverlbl.Text = "Quest Giver:";
             // 
-            // questdesclbl
+            // questdescdb
             // 
-            this.questdesclbl.AutoSize = true;
-            this.questdesclbl.Location = new System.Drawing.Point(9, 115);
-            this.questdesclbl.Name = "questdesclbl";
-            this.questdesclbl.Size = new System.Drawing.Size(94, 13);
-            this.questdesclbl.TabIndex = 7;
-            this.questdesclbl.Text = "Quest Description:";
-            // 
-            // questnamedb
-            // 
-            this.questnamedb.Location = new System.Drawing.Point(81, 52);
-            this.questnamedb.Name = "questnamedb";
-            this.questnamedb.Size = new System.Drawing.Size(142, 13);
-            this.questnamedb.TabIndex = 10;
-            this.questnamedb.Text = "Name";
+            this.questdescdb.Location = new System.Drawing.Point(3, 137);
+            this.questdescdb.Name = "questdescdb";
+            this.questdescdb.Size = new System.Drawing.Size(220, 309);
+            this.questdescdb.TabIndex = 12;
+            this.questdescdb.Text = "Description";
             // 
             // questnamelbl
             // 
@@ -516,22 +527,30 @@
             this.questnamelbl.TabIndex = 6;
             this.questnamelbl.Text = "Quest Name:";
             // 
-            // questdescdb
+            // questnamedb
             // 
-            this.questdescdb.Location = new System.Drawing.Point(3, 137);
-            this.questdescdb.Name = "questdescdb";
-            this.questdescdb.Size = new System.Drawing.Size(220, 309);
-            this.questdescdb.TabIndex = 12;
-            this.questdescdb.Text = "Description";
+            this.questnamedb.Location = new System.Drawing.Point(81, 52);
+            this.questnamedb.Name = "questnamedb";
+            this.questnamedb.Size = new System.Drawing.Size(142, 13);
+            this.questnamedb.TabIndex = 10;
+            this.questnamedb.Text = "Name";
             // 
-            // questgiverlbl
+            // questdesclbl
             // 
-            this.questgiverlbl.AutoSize = true;
-            this.questgiverlbl.Location = new System.Drawing.Point(9, 11);
-            this.questgiverlbl.Name = "questgiverlbl";
-            this.questgiverlbl.Size = new System.Drawing.Size(66, 13);
-            this.questgiverlbl.TabIndex = 8;
-            this.questgiverlbl.Text = "Quest Giver:";
+            this.questdesclbl.AutoSize = true;
+            this.questdesclbl.Location = new System.Drawing.Point(9, 115);
+            this.questdesclbl.Name = "questdesclbl";
+            this.questdesclbl.Size = new System.Drawing.Size(94, 13);
+            this.questdesclbl.TabIndex = 7;
+            this.questdesclbl.Text = "Quest Description:";
+            // 
+            // questgiverdb
+            // 
+            this.questgiverdb.Location = new System.Drawing.Point(81, 11);
+            this.questgiverdb.Name = "questgiverdb";
+            this.questgiverdb.Size = new System.Drawing.Size(142, 13);
+            this.questgiverdb.TabIndex = 11;
+            this.questgiverdb.Text = "Name";
             // 
             // panel1
             // 
@@ -549,11 +568,277 @@
             this.panel1.Size = new System.Drawing.Size(227, 1041);
             this.panel1.TabIndex = 2;
             // 
+            // PraporPanel
+            // 
+            this.PraporPanel.BackColor = System.Drawing.SystemColors.GrayText;
+            this.PraporPanel.Controls.Add(this.label5);
+            this.PraporPanel.Controls.Add(this.label4);
+            this.PraporPanel.Controls.Add(this.label3);
+            this.PraporPanel.Controls.Add(this.label2);
+            this.PraporPanel.Controls.Add(this.label12);
+            this.PraporPanel.Controls.Add(this.label10);
+            this.PraporPanel.Controls.Add(this.label6);
+            this.PraporPanel.Controls.Add(this.label7);
+            this.PraporPanel.Controls.Add(this.label8);
+            this.PraporPanel.Controls.Add(this.label9);
+            this.PraporPanel.Controls.Add(this.label11);
+            this.PraporPanel.Controls.Add(this.label13);
+            this.PraporPanel.Controls.Add(this.label14);
+            this.PraporPanel.Controls.Add(this.label16);
+            this.PraporPanel.Controls.Add(this.label17);
+            this.PraporPanel.Controls.Add(this.label18);
+            this.PraporPanel.Controls.Add(this.debutlbl);
+            this.PraporPanel.Location = new System.Drawing.Point(229, 1);
+            this.PraporPanel.Name = "PraporPanel";
+            this.PraporPanel.Size = new System.Drawing.Size(1683, 1040);
+            this.PraporPanel.TabIndex = 65;
+            this.PraporPanel.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.BurlyWood;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(923, 391);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(104, 77);
+            this.label6.TabIndex = 59;
+            this.label6.Tag = "9";
+            this.label6.Text = "Grenadier";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BackColor = System.Drawing.Color.BurlyWood;
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label7.Location = new System.Drawing.Point(923, 270);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 71);
+            this.label7.TabIndex = 58;
+            this.label7.Tag = "9";
+            this.label7.Text = "Punisher Part 1";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.BurlyWood;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label8.Location = new System.Drawing.Point(813, 269);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(104, 71);
+            this.label8.TabIndex = 57;
+            this.label8.Tag = "8";
+            this.label8.Text = "Shaking Up Teller";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.BurlyWood;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label9.Location = new System.Drawing.Point(703, 270);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(104, 71);
+            this.label9.TabIndex = 56;
+            this.label9.Tag = "7";
+            this.label9.Text = "Postman Part 1";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.BurlyWood;
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label11.Location = new System.Drawing.Point(593, 269);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 71);
+            this.label11.TabIndex = 54;
+            this.label11.Tag = "6";
+            this.label11.Text = "Ice Cream Cones";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BackColor = System.Drawing.Color.BurlyWood;
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label13.Location = new System.Drawing.Point(250, 391);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(117, 71);
+            this.label13.TabIndex = 52;
+            this.label13.Tag = "3";
+            this.label13.Text = "Shootout Picnic";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.BurlyWood;
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label14.Location = new System.Drawing.Point(250, 269);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(117, 72);
+            this.label14.TabIndex = 51;
+            this.label14.Tag = "3";
+            this.label14.Text = "Delivery From The Past";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.BurlyWood;
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label16.Location = new System.Drawing.Point(483, 270);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(104, 70);
+            this.label16.TabIndex = 38;
+            this.label16.Tag = "5";
+            this.label16.Text = "Bad Rep Evidence";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.BackColor = System.Drawing.Color.BurlyWood;
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label17.Location = new System.Drawing.Point(373, 270);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(104, 71);
+            this.label17.TabIndex = 35;
+            this.label17.Tag = "4";
+            this.label17.Text = "BP Depot";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.BurlyWood;
+            this.label18.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label18.Location = new System.Drawing.Point(127, 269);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(117, 72);
+            this.label18.TabIndex = 32;
+            this.label18.Tag = "2";
+            this.label18.Text = "Checking";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // debutlbl
+            // 
+            this.debutlbl.BackColor = System.Drawing.Color.BurlyWood;
+            this.debutlbl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.debutlbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.debutlbl.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.debutlbl.Location = new System.Drawing.Point(4, 269);
+            this.debutlbl.Name = "debutlbl";
+            this.debutlbl.Size = new System.Drawing.Size(117, 72);
+            this.debutlbl.TabIndex = 11;
+            this.debutlbl.Tag = "1";
+            this.debutlbl.Text = "Debut";
+            this.debutlbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.BurlyWood;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label10.Location = new System.Drawing.Point(1033, 270);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(104, 71);
+            this.label10.TabIndex = 64;
+            this.label10.Tag = "10";
+            this.label10.Text = "Punisher Part 2";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BackColor = System.Drawing.Color.BurlyWood;
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label12.Location = new System.Drawing.Point(1143, 270);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(104, 71);
+            this.label12.TabIndex = 65;
+            this.label12.Tag = "11";
+            this.label12.Text = "Punisher Part 3";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.BurlyWood;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(1253, 269);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 71);
+            this.label2.TabIndex = 66;
+            this.label2.Tag = "12";
+            this.label2.Text = "Punisher Part 4";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.BurlyWood;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(1363, 270);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 71);
+            this.label3.TabIndex = 67;
+            this.label3.Tag = "13";
+            this.label3.Text = "Punisher Part 5";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.BurlyWood;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(1473, 269);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 71);
+            this.label4.TabIndex = 68;
+            this.label4.Tag = "14";
+            this.label4.Text = "Punisher Part 6";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.BurlyWood;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(1033, 391);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(104, 77);
+            this.label5.TabIndex = 69;
+            this.label5.Tag = "10";
+            this.label5.Text = "Insomnia";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // questtree
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1904, 1041);
+            this.Controls.Add(this.PraporPanel);
             this.Controls.Add(this.unavailablepanel);
             this.Controls.Add(this.TherapistPanel);
             this.Controls.Add(this.AllQuestsPanel);
@@ -569,6 +854,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.PraporPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -613,5 +899,23 @@
         private System.Windows.Forms.Label questdesclbl;
         private System.Windows.Forms.Label questgiverdb;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel PraporPanel;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label debutlbl;
     }
 }

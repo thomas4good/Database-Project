@@ -19,6 +19,7 @@ namespace Database_Project
             InitializeComponent();
             AllQuestsPanel.Visible = true;
             TherapistPanel.Visible = true;
+            PraporPanel.Visible = false;
             unavailablepanel.Visible = false;
 
             databasecontrol.SelectTrader();
@@ -52,7 +53,6 @@ namespace Database_Project
 
             TherapistPanel.Visible = true;
 
-            Shortagelbl.Tag = 1;
 
         }
 
@@ -78,20 +78,44 @@ namespace Database_Project
                 DataRow row2 = databasecontrol.dt.Rows[0];
                 var quest_num = Int32.Parse(row2["quest_num"].ToString());
 
-                var labels = TherapistPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) < quest_num);
+                DataRowView oDataRowView2 = tradercb.SelectedItem as DataRowView;
+                string sValue2 = "";
+                sValue2 = oDataRowView2.Row[tradercb.DisplayMember] as string;
 
-                foreach (var label in labels)
+                if (sValue2 == "Therapist")
                 {
-                    label.BackColor = Color.Gold;
+                    var labels = TherapistPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) < quest_num);
+
+                    foreach (var label in labels)
+                    {
+                        label.BackColor = Color.Gold;
+                    }
+
+                    var labels2 = TherapistPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) >= quest_num);
+
+                    foreach (var label2 in labels2)
+                    {
+                        label2.BackColor = Color.PaleVioletRed;
+                    }
+
+
                 }
-
-                var labels2 = TherapistPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) >= quest_num);
-
-                foreach (var label2 in labels2)
+                else if(sValue2 == "Prapor")
                 {
-                    label2.BackColor = Color.PaleVioletRed;
-                }
+                    var labels = PraporPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) < quest_num);
 
+                    foreach (var label in labels)
+                    {
+                        label.BackColor = Color.Gold;
+                    }
+
+                    var labels2 = PraporPanel.Controls.OfType<Label>().Where(label => Convert.ToInt32(label.Tag) >= quest_num);
+
+                    foreach (var label2 in labels2)
+                    {
+                        label2.BackColor = Color.BurlyWood;
+                    }
+                }
             }
             catch
             {
@@ -129,6 +153,7 @@ namespace Database_Project
         {
             AllQuestsPanel.Visible = true;
             TherapistPanel.Visible = false;
+            PraporPanel.Visible = false;
             unavailablepanel.Visible = false;
         }
 
@@ -149,13 +174,18 @@ namespace Database_Project
                 {
                     TherapistPanel.Visible = true;
                     unavailablepanel.Visible = false;
+                    PraporPanel.Visible = false;
                 }
-                else if (sValue == "ttt")
+                else if (sValue == "Prapor")
                 {
-
+                    PraporPanel.Visible = true;
+                    TherapistPanel.Visible = false;
+                    unavailablepanel.Visible = false;
                 }
                 else
                 {
+                    PraporPanel.Visible = false;
+                    TherapistPanel.Visible = false;
                     unavailablepanel.Visible = true;
                 }
 
@@ -195,6 +225,11 @@ namespace Database_Project
         }
 
         private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
         {
 
         }
